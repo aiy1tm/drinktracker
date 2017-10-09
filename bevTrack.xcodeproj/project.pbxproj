@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13792FDA0544AE2FEDEEE156 /* Pods_bevTrack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F61B0D3C10535FDD945D5C /* Pods_bevTrack.framework */; };
 		D200DDB51CA7472500FD4AC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D200DDB41CA7472500FD4AC8 /* main.m */; };
 		D200DDB81CA7472500FD4AC8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D200DDB71CA7472500FD4AC8 /* AppDelegate.m */; };
 		D200DDBB1CA7472500FD4AC8 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D200DDBA1CA7472500FD4AC8 /* FirstViewController.m */; };
@@ -14,9 +15,20 @@
 		D200DDC11CA7472500FD4AC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D200DDBF1CA7472500FD4AC8 /* Main.storyboard */; };
 		D200DDC31CA7472500FD4AC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D200DDC21CA7472500FD4AC8 /* Assets.xcassets */; };
 		D200DDC61CA7472500FD4AC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D200DDC41CA7472500FD4AC8 /* LaunchScreen.storyboard */; };
+		D200DDCF1CA7519400FD4AC8 /* drinkTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = D200DDCE1CA7519400FD4AC8 /* drinkTracker.m */; };
+		D200DDD21CA75F3D00FD4AC8 /* PositionEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D200DDD11CA75F3D00FD4AC8 /* PositionEditorViewController.m */; };
+		D26341501CE82C4000358D98 /* GADBannerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D263414D1CE82C4000358D98 /* GADBannerHandler.m */; };
+		D26341511CE82C4000358D98 /* AdHostingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D263414F1CE82C4000358D98 /* AdHostingViewController.m */; };
+		D271331A1CA84E8700900EC4 /* UserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D27133191CA84E8700900EC4 /* UserDetailViewController.m */; };
+		D2D2F0B11CACB8AB00604D16 /* CurvedScatterPlot.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D2F0B01CACB8AB00604D16 /* CurvedScatterPlot.m */; };
+		D2D2F0B41CACB8F600604D16 /* PlotItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D2F0B31CACB8F600604D16 /* PlotItem.m */; };
+		D2D2F0B81CACB96200604D16 /* PlotGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D2F0B71CACB96200604D16 /* PlotGallery.m */; };
+		D2D2F1231CC2064800604D16 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2D2F1221CC2064800604D16 /* BasicViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40F61B0D3C10535FDD945D5C /* Pods_bevTrack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bevTrack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C70C7C63E202E928EC3FAA76 /* Pods-bevTrack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bevTrack.release.xcconfig"; path = "Pods/Target Support Files/Pods-bevTrack/Pods-bevTrack.release.xcconfig"; sourceTree = "<group>"; };
 		D200DDB01CA7472000FD4AC8 /* bevTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bevTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D200DDB41CA7472500FD4AC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D200DDB61CA7472500FD4AC8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +41,25 @@
 		D200DDC21CA7472500FD4AC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D200DDC51CA7472500FD4AC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D200DDC71CA7472500FD4AC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D200DDCD1CA7519400FD4AC8 /* drinkTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = drinkTracker.h; sourceTree = "<group>"; };
+		D200DDCE1CA7519400FD4AC8 /* drinkTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = drinkTracker.m; sourceTree = "<group>"; };
+		D200DDD01CA75F3D00FD4AC8 /* PositionEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionEditorViewController.h; sourceTree = "<group>"; };
+		D200DDD11CA75F3D00FD4AC8 /* PositionEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PositionEditorViewController.m; sourceTree = "<group>"; };
+		D263414C1CE82C4000358D98 /* GADBannerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerHandler.h; sourceTree = "<group>"; };
+		D263414D1CE82C4000358D98 /* GADBannerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GADBannerHandler.m; sourceTree = "<group>"; };
+		D263414E1CE82C4000358D98 /* AdHostingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdHostingViewController.h; sourceTree = "<group>"; };
+		D263414F1CE82C4000358D98 /* AdHostingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdHostingViewController.m; sourceTree = "<group>"; };
+		D27133181CA84E8700900EC4 /* UserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailViewController.h; sourceTree = "<group>"; };
+		D27133191CA84E8700900EC4 /* UserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailViewController.m; sourceTree = "<group>"; };
+		D2D2F0AF1CACB8AB00604D16 /* CurvedScatterPlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurvedScatterPlot.h; sourceTree = "<group>"; };
+		D2D2F0B01CACB8AB00604D16 /* CurvedScatterPlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurvedScatterPlot.m; sourceTree = "<group>"; };
+		D2D2F0B21CACB8F600604D16 /* PlotItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlotItem.h; sourceTree = "<group>"; };
+		D2D2F0B31CACB8F600604D16 /* PlotItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlotItem.m; sourceTree = "<group>"; };
+		D2D2F0B61CACB96200604D16 /* PlotGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlotGallery.h; sourceTree = "<group>"; };
+		D2D2F0B71CACB96200604D16 /* PlotGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlotGallery.m; sourceTree = "<group>"; };
+		D2D2F1211CC2064800604D16 /* BasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
+		D2D2F1221CC2064800604D16 /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
+		F1B7B85CB53945FED2459C47 /* Pods-bevTrack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bevTrack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bevTrack/Pods-bevTrack.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +67,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13792FDA0544AE2FEDEEE156 /* Pods_bevTrack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AE0DD992C1321C5204C3C06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F1B7B85CB53945FED2459C47 /* Pods-bevTrack.debug.xcconfig */,
+				C70C7C63E202E928EC3FAA76 /* Pods-bevTrack.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		98A9AC2A1A3F8C92611FA22C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40F61B0D3C10535FDD945D5C /* Pods_bevTrack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D200DDA71CA7472000FD4AC8 = {
 			isa = PBXGroup;
 			children = (
 				D200DDB21CA7472500FD4AC8 /* bevTrack */,
 				D200DDB11CA7472000FD4AC8 /* Products */,
+				2AE0DD992C1321C5204C3C06 /* Pods */,
+				98A9AC2A1A3F8C92611FA22C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +116,19 @@
 				D200DDB71CA7472500FD4AC8 /* AppDelegate.m */,
 				D200DDB91CA7472500FD4AC8 /* FirstViewController.h */,
 				D200DDBA1CA7472500FD4AC8 /* FirstViewController.m */,
+				D2D2F1211CC2064800604D16 /* BasicViewController.h */,
+				D2D2F1221CC2064800604D16 /* BasicViewController.m */,
+				D2D2F11D1CC0871D00604D16 /* Ad Handler */,
 				D200DDBC1CA7472500FD4AC8 /* SecondViewController.h */,
 				D200DDBD1CA7472500FD4AC8 /* SecondViewController.m */,
+				D200DDD01CA75F3D00FD4AC8 /* PositionEditorViewController.h */,
+				D200DDD11CA75F3D00FD4AC8 /* PositionEditorViewController.m */,
+				D200DDCD1CA7519400FD4AC8 /* drinkTracker.h */,
+				D200DDCE1CA7519400FD4AC8 /* drinkTracker.m */,
 				D200DDBF1CA7472500FD4AC8 /* Main.storyboard */,
+				D27133181CA84E8700900EC4 /* UserDetailViewController.h */,
+				D27133191CA84E8700900EC4 /* UserDetailViewController.m */,
+				D2D2F0B51CACB90500604D16 /* Plots */,
 				D200DDC21CA7472500FD4AC8 /* Assets.xcassets */,
 				D200DDC41CA7472500FD4AC8 /* LaunchScreen.storyboard */,
 				D200DDC71CA7472500FD4AC8 /* Info.plist */,
@@ -84,6 +145,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D2D2F0B51CACB90500604D16 /* Plots */ = {
+			isa = PBXGroup;
+			children = (
+				D2D2F0B21CACB8F600604D16 /* PlotItem.h */,
+				D2D2F0B31CACB8F600604D16 /* PlotItem.m */,
+				D2D2F0B61CACB96200604D16 /* PlotGallery.h */,
+				D2D2F0B71CACB96200604D16 /* PlotGallery.m */,
+				D2D2F0AF1CACB8AB00604D16 /* CurvedScatterPlot.h */,
+				D2D2F0B01CACB8AB00604D16 /* CurvedScatterPlot.m */,
+			);
+			name = Plots;
+			sourceTree = "<group>";
+		};
+		D2D2F11D1CC0871D00604D16 /* Ad Handler */ = {
+			isa = PBXGroup;
+			children = (
+				D263414C1CE82C4000358D98 /* GADBannerHandler.h */,
+				D263414D1CE82C4000358D98 /* GADBannerHandler.m */,
+				D263414E1CE82C4000358D98 /* AdHostingViewController.h */,
+				D263414F1CE82C4000358D98 /* AdHostingViewController.m */,
+			);
+			name = "Ad Handler";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,9 +176,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D200DDCA1CA7472500FD4AC8 /* Build configuration list for PBXNativeTarget "bevTrack" */;
 			buildPhases = (
+				C347F16F9C082419EEC41B8B /* [CP] Check Pods Manifest.lock */,
 				D200DDAC1CA7472000FD4AC8 /* Sources */,
 				D200DDAD1CA7472000FD4AC8 /* Frameworks */,
 				D200DDAE1CA7472000FD4AC8 /* Resources */,
+				A0FDBDAFBB1B45A6E3AF0B34 /* [CP] Embed Pods Frameworks */,
+				52F8D96777F7D237A6D5EE33 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -110,11 +198,13 @@
 		D200DDA81CA7472000FD4AC8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Scott Sullivan";
 				TargetAttributes = {
 					D200DDAF1CA7472000FD4AC8 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = VTK8C9RSM2;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -149,15 +239,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		52F8D96777F7D237A6D5EE33 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bevTrack/Pods-bevTrack-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0FDBDAFBB1B45A6E3AF0B34 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-bevTrack/Pods-bevTrack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CorePlot/CorePlot.framework",
+				"${BUILT_PRODUCTS_DIR}/IAPHelper/IAPHelper.framework",
+				"${BUILT_PRODUCTS_DIR}/JTCalendar/JTCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/iRate/iRate.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CorePlot.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IAPHelper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iRate.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-bevTrack/Pods-bevTrack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C347F16F9C082419EEC41B8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bevTrack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D200DDAC1CA7472000FD4AC8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D200DDBE1CA7472500FD4AC8 /* SecondViewController.m in Sources */,
+				D2D2F0B41CACB8F600604D16 /* PlotItem.m in Sources */,
+				D271331A1CA84E8700900EC4 /* UserDetailViewController.m in Sources */,
+				D200DDCF1CA7519400FD4AC8 /* drinkTracker.m in Sources */,
+				D200DDD21CA75F3D00FD4AC8 /* PositionEditorViewController.m in Sources */,
+				D26341501CE82C4000358D98 /* GADBannerHandler.m in Sources */,
+				D26341511CE82C4000358D98 /* AdHostingViewController.m in Sources */,
+				D2D2F0B11CACB8AB00604D16 /* CurvedScatterPlot.m in Sources */,
+				D2D2F1231CC2064800604D16 /* BasicViewController.m in Sources */,
 				D200DDB81CA7472500FD4AC8 /* AppDelegate.m in Sources */,
 				D200DDBB1CA7472500FD4AC8 /* FirstViewController.m in Sources */,
 				D200DDB51CA7472500FD4AC8 /* main.m in Sources */,
+				D2D2F0B81CACB96200604D16 /* PlotGallery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +356,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -242,8 +403,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -269,23 +432,37 @@
 		};
 		D200DDCB1CA7472500FD4AC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1B7B85CB53945FED2459C47 /* Pods-bevTrack.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = bevTrack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sullios.bevTrack;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sullios.drinktracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		D200DDCC1CA7472500FD4AC8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C70C7C63E202E928EC3FAA76 /* Pods-bevTrack.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = bevTrack/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = sullios.bevTrack;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sullios.drinktracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -308,6 +485,7 @@
 				D200DDCC1CA7472500FD4AC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
