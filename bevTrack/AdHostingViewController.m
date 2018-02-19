@@ -120,6 +120,7 @@
     return result;
 }
 
+
 -(void) enablePremium
 {
     NSLog(@"enable the premium features");

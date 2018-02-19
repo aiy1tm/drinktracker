@@ -20,52 +20,37 @@
 
 @implementation SecondViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+
 
 }
+    
+
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
     
         UIView *footerView=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60)];
+    
+    if([GADBannerHandler singleton].adsEnabled){
 
-   // UBSDKRideRequestButton *uberButton = [[UBSDKRideRequestButton alloc] init];
-    
-   
-  //  [uberButton setText:@"Get around responsibly with Uber." font:nil];
-    
-    
-    //[footerView addSubview:uberButton];
-   /* NSLayoutAttribute boundary1 = NSLayoutAttributeBottom;
-    NSLayoutAttribute boundary2 = NSLayoutAttributeBottom;
-    [footerView addConstraint:
-     [NSLayoutConstraint constraintWithItem:uberButton
-                                  attribute:boundary2
-                                  relatedBy:NSLayoutRelationEqual
-                                     toItem:footerView
-                                  attribute:boundary1
-                                 multiplier:1.0
-                                   constant:0]];
-    
-    // center the banner
-    [footerView addConstraint:
-     [NSLayoutConstraint constraintWithItem:uberButton
-                                  attribute:NSLayoutAttributeCenterX
-                                  relatedBy:NSLayoutRelationEqual
-                                     toItem:footerView
-                                  attribute:NSLayoutAttributeCenterX
-                                 multiplier:1.0
-                                   constant:0]];
-    
-    uberButton.translatesAutoresizingMaskIntoConstraints = NO;
-  //  NSLog(@"uber text: %@",uberButton.titleLabel.text);*/
+        [[GADBannerHandler singleton] showBannerInView:footerView];
+        
+        NSLog(@"plop ad in the footer");
+    }
 
         return footerView;
     
 }
+    
+- (void)orientationChanged:(NSNotification *)notification{
+        
+
+        
+    }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

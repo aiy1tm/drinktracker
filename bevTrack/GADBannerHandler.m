@@ -6,13 +6,10 @@
 //  Copyright © 2016 Scott Sullivan. All rights reserved.
 //
 
-/*
- Ad unit name: BottomBanner
- Ad unit ID: ca-app-pub-3181502605151143/1344553112
- */
 
 #import "GADBannerHandler.h"
 #import "AdHostingViewController.h"
+#define ADDUNITID @"AddyourIDHereAsStringLiteral"
 
 @interface GADBannerHandler  ()
 
@@ -34,8 +31,10 @@
 
 -(void) toggleInterstitShowability
 {
-    if ([lastInterstitialShownDate_ timeIntervalSinceNow]<180) {
+    float timeSince = [lastInterstitialShownDate_ timeIntervalSinceNow];
+    if ([lastInterstitialShownDate_ timeIntervalSinceNow]<-120) {
         canShowInterstitial_ = YES;
+        //NSLog(@"toggled showability %f",timeSince);
         [self checkAdShowability];
     }
     
@@ -83,6 +82,7 @@
 -(void) checkAdShowability
 {
     if (!self.adsEnabled) {
+        //NSLog(@"checked showability");
         canShowInterstitial_ = NO;
         shouldShow_=NO;
         if (adBanner_) {
@@ -104,7 +104,7 @@
         
         adBanner_.delegate = self;
         adBanner_.rootViewController = rootViewController;
-        adBanner_.adUnitID = @"ca-app-pub-3181502605151143/3385715913";
+        adBanner_.adUnitID = ADDUNITID;
         
         GADRequest *request = [GADRequest request];
         request.testDevices = @[ kGADSimulatorID,@"dea989155328229d034e18ec503b16aa",@"0d070d28f44b3347fa14792114cd9100"  ];
@@ -117,6 +117,27 @@
         isLoaded_ = YES;
     }
     
+}
+
+-(void) showBannerInView: (UIView *)view
+{
+    if (isLoaded_) {
+        [view addSubview:adBanner_];
+   
+    } else {
+        
+        adBanner_.delegate = self;
+        adBanner_.adUnitID = ADDUNITID ;
+        
+        GADRequest *request = [GADRequest request];
+        request.testDevices = @[ kGADSimulatorID,@"dea989155328229d034e18ec503b16aa",@"0d070d28f44b3347fa14792114cd9100"  ];
+        [adBanner_ loadRequest:request];
+        
+        [view addSubview:adBanner_];
+        
+        
+        isLoaded_ = YES;
+    }
 }
 
 -(void) layoutBannerForRootController:(AdHostingViewController*) rootViewController{
@@ -223,6 +244,7 @@
 - (void)interstitialDidDismissScreen:(GADInterstitial *)interstitial {
     interstit_ = [self createAndLoadInterstitial];
     canShowInterstitial_ = NO; // will be set back to yes in 60 seconds ,or less, depending on the timer...
+    //NSLog(@"did dismiss interstitial");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -247,7 +269,7 @@
     [defaults setObject:[NSNumber numberWithBool:self.adsEnabled] forKey:@"iapOwned"];
     [defaults synchronize];
     
-    NSLog(@"called savestate");
+    //NSLog(@"called savestate");
     
     
 }

@@ -19,6 +19,8 @@
     NSDate *_dateSelected;
     float _dateDrinks;
     float _dateBac;
+    float _weekDrinks;
+    float _monthDrinks;
 }
 
 @end
@@ -42,6 +44,9 @@
     [super viewDidLoad];
     
     _dateDrinks = 0;
+    _weekDrinks = 0;
+    _monthDrinks = 0;
+    
     
     _calendarManager = [JTCalendarManager new];
     _calendarManager.delegate = self;
@@ -59,6 +64,10 @@
      [[NSNotificationCenter defaultCenter] addObserver:self  selector:@selector(orientationChanged:)    name:UIDeviceOrientationDidChangeNotification  object:nil];
     
     [self orientationChanged:nil];
+    self.shouldShowInterstitialOnAppearance = YES;
+    
+    self.shouldShowBannerAds = YES;
+    self.showAdsOnTop = NO;
     self.shouldShowInterstitialOnAppearance = YES;
     
     [_calendarMenuView updateConstraints];
@@ -132,22 +141,32 @@
     // Today
     if([_calendarManager.dateHelper date:[NSDate date] isTheSameDayThan:dayView.date]){
         dayView.circleView.hidden = NO;
-        dayView.circleView.backgroundColor = [UIColor blueColor];
+        dayView.circleView.backgroundColor = [UIColor blackColor];
         dayView.dotView.backgroundColor = [UIColor whiteColor];
         dayView.textLabel.textColor = [UIColor whiteColor];
     }
     // Selected date
     else if(_dateSelected && [_calendarManager.dateHelper date:_dateSelected isTheSameDayThan:dayView.date]){
         dayView.circleView.hidden = NO;
-        dayView.circleView.backgroundColor = [UIColor redColor];
+        dayView.circleView.backgroundColor = [UIColor orangeColor];
         dayView.dotView.backgroundColor = [UIColor whiteColor];
         dayView.textLabel.textColor = [UIColor whiteColor];
     }
     // Other month
     else if(![_calendarManager.dateHelper date:_calendarContentView.date isTheSameMonthThan:dayView.date]){
         dayView.circleView.hidden = YES;
-        dayView.dotView.backgroundColor = [UIColor redColor];
+        dayView.dotView.backgroundColor = [UIColor cyanColor];
         dayView.textLabel.textColor = [UIColor lightGrayColor];
+    }
+    
+    else if ([_calendarManager.dateHelper date:_dateSelected isTheSameWeekThan:dayView.date] ) // another day same week
+    {
+        //colorize
+        dayView.circleView.hidden = NO;
+        dayView.circleView.backgroundColor = [UIColor magentaColor];
+        dayView.dotView.backgroundColor = [UIColor whiteColor];
+        dayView.textLabel.textColor = [UIColor whiteColor];
+        
     }
     // Another day of the current month
     else{
@@ -180,17 +199,30 @@
                     } completion:nil];
     _dateDrinks = 0;
     _dateBac = 0;
+    _monthDrinks = 0;
+    _weekDrinks = 0;
     
-    if ([self haveEventForDay:dayView.date]) {
+//    if ([self haveEventForDay:dayView.date]) {
         for (NSDictionary *drink in [drinkTracker dataHandler].drinkHistory) {
-            if ([_calendarManager.dateHelper date:dayView.date isTheSameDayThan:drink[@"time"]]) {
+            if ([_calendarManager.dateHelper date:drink[@"time"] isTheSameDayThan:_dateSelected]) {
                 _dateDrinks = [drink[@"stdBev"] floatValue];
                 _dateBac = [drink[@"maxBac"] floatValue];
             }
+            if ([_calendarManager.dateHelper date:drink[@"time"] isTheSameMonthThan:_dateSelected]) {
+                _monthDrinks += [drink[@"stdBev"] floatValue];
+            }
+            
+            if ([_calendarManager.dateHelper date:drink[@"time"] isTheSameWeekThan:_dateSelected]) {
+                _weekDrinks += [drink[@"stdBev"] floatValue];
+            }
+            
+
         }
-    }
+   // }
+    
+
     //NSLog(@"%.1f drinks on date",_dateDrinks);
-    self.readoutLabel.text = [NSString stringWithFormat:@"%.1f standard drinks. %.02f max BAC. \n %d cals from alcohol alone.",_dateDrinks,_dateBac,(int)(94*_dateDrinks)];
+    self.readoutLabel.text = [NSString stringWithFormat:@"%.1f std drinks (%d alc. cals) on date. \n%.1f std drinks (%d cals) in week. \n%.1f std drinks (%d cals) in month.",_dateDrinks,(int)(94*_dateDrinks),_weekDrinks,(int)(94*_weekDrinks),_monthDrinks,(int)(94*_monthDrinks)];
     
     // Load the previous or next page if touch a day from another month
     

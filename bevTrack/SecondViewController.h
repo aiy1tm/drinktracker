@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AdHostingViewController.h"
 
 
 @interface SecondViewController : UITableViewController
+
+
 
 
 @end

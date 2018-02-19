@@ -27,6 +27,7 @@
 
 
 +(GADBannerHandler *)singleton;
+-(void)showBannerInView: (UIView*) view;
 -(void)resetAdView:(UIViewController *)rootViewController;
 -(void)showInterstitialIfReadyOnRVC: (UIViewController*) rvc;
 -(void) saveState;
