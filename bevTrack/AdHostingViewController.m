@@ -8,6 +8,9 @@
 
 #import "AdHostingViewController.h"
 #import "GADBannerHandler.h"
+#import "IAPShare.h"
+
+#define SHAREDSECRET @"SharedSecretStringLiteral"
 
 
 @interface AdHostingViewController ()
@@ -68,7 +71,7 @@
                                             }
                                             else if(trans.transactionState == SKPaymentTransactionStatePurchased) {
 #warning use your sharedsecret from itunesconnect.
-                                                [[IAPShare sharedHelper].iap checkReceipt:trans.transactionReceipt AndSharedSecret:@"c328a334003f4edabff9b3aedc722596" onCompletion:^(NSString *response, NSError *error) {
+                                                [[IAPShare sharedHelper].iap checkReceipt:trans.transactionReceipt AndSharedSecret:SHAREDSECRET onCompletion:^(NSString *response, NSError *error) {
                                                     
                                                     //Convert JSON String to NSDictionary
                                                     NSDictionary* rec = [IAPShare toJSON:response];

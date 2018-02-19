@@ -231,7 +231,7 @@
 
 - (GADInterstitial *)createAndLoadInterstitial {
     GADInterstitial *interstitial =
-    [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-3181502605151143/9587673513"];
+    [[GADInterstitial alloc] initWithAdUnitID:ADDUNITID];
     GADRequest *request = [GADRequest request];
  
     request.testDevices =@[ kGADSimulatorID,@"dea989155328229d034e18ec503b16aa",@"0d070d28f44b3347fa14792114cd9100"  ];

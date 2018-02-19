@@ -210,6 +210,7 @@
             break;
             
         default:
+            vol = 1;
             break;
     }
     
